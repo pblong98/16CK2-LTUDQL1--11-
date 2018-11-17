@@ -54,6 +54,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +78,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSDL\CSDL.csproj">
+      <Project>{966c91ea-fc4f-4199-82b5-3e9f65b5703f}</Project>
+      <Name>CSDL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XuLy\XuLy.csproj">
+      <Project>{61b0db69-e6e6-4043-9256-512b85ec3cab}</Project>
+      <Name>XuLy</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

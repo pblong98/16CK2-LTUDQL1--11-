@@ -8,11 +8,11 @@ using System.Data.SqlClient;
 
 namespace CSDL
 {
-	class provider
+	public class CSDL
 	{
 		static string ConnectionString = @"Data Source=DESKTOP-4P58K4I\SQLEXPRESS;Initial Catalog=QLHS;Integrated Security=True";
 
-		public provider() { }
+		public CSDL() { }
 
 		SqlConnection Connection { get; set; }
 
@@ -96,4 +96,5 @@ namespace CSDL
 		}
 	}
 }
+
 
