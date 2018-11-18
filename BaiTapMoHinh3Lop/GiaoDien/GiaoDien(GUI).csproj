@@ -80,13 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSDL\CSDL.csproj">
-      <Project>{966c91ea-fc4f-4199-82b5-3e9f65b5703f}</Project>
-      <Name>CSDL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\XuLy\XuLy.csproj">
+    <ProjectReference Include="..\XuLy\XuLy%28BUS%29.csproj">
       <Project>{61b0db69-e6e6-4043-9256-512b85ec3cab}</Project>
-      <Name>XuLy</Name>
+      <Name>XuLy%28BUS%29</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
