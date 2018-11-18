@@ -76,5 +76,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_XuLy\BUS_XuLy.csproj">
+      <Project>{e7fdc3fc-361a-4d1b-a9d6-6acfe160b7b5}</Project>
+      <Name>BUS_XuLy</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
