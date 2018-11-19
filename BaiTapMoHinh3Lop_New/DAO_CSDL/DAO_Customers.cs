@@ -13,12 +13,12 @@ namespace DAO_CSDL
         public DataTable LayDanhSach()
         {
             Provider provider = new Provider();
+            DataTable danhsach = new DataTable();
             try
             {
                 provider.Connect();
                 string StrSQL = "Select * from Customers";
-                DataTable danhsach = provider.Select(CommandType.Text, StrSQL);
-                return danhsach;
+                danhsach = provider.Select(CommandType.Text, StrSQL);               
             }catch(SqlException ex)
             {
                 throw ex;
@@ -27,15 +27,17 @@ namespace DAO_CSDL
             {
                 provider.DisConnect();
             }
+            return danhsach;
         }
-        public void Them(Customers cs)
+        public int Them(Customers cs)
         {
+            int nRow = -1;
             Provider provider = new Provider();
             try
             {
                 provider.Connect();
                 string StrSQL = "sp_AddCustomers";
-                int nRow = provider.ExecuteNonQuery(CommandType.StoredProcedure, StrSQL,
+                nRow = provider.ExecuteNonQuery(CommandType.StoredProcedure, StrSQL,
                     new SqlParameter { ParameterName = "CustomerID",Value=cs.CustomerID},
                     new SqlParameter { ParameterName = "CompanyName", Value = cs.CompanyName },
                     new SqlParameter { ParameterName = "ContactName", Value = cs.ContactName },                   
@@ -55,17 +57,19 @@ namespace DAO_CSDL
             }
             finally
             {
-                provider.DisConnect();
+                provider.DisConnect();               
             }
+            return nRow;
         }
-        public void Xoa(string CustomerID)
+        public int Xoa(string CustomerID)
         {
+            int nRow = -1;
             Provider provider = new Provider();
             try
             {
                 provider.Connect();
                 string StrSQL = "sp_DeleteCustomers";
-                int row = provider.ExecuteNonQuery(CommandType.StoredProcedure, StrSQL,
+                nRow = provider.ExecuteNonQuery(CommandType.StoredProcedure, StrSQL,
                     new SqlParameter { ParameterName= "CustomerID",Value= CustomerID });               
             }
             catch (SqlException ex)
@@ -76,15 +80,17 @@ namespace DAO_CSDL
             {
                 provider.DisConnect();
             }
+            return nRow;
         }
-        public void Sua(Customers cs)
+        public int Sua(Customers cs)
         {
+            int nRow = -1;
             Provider provider = new Provider();
             try
             {
                 provider.Connect();
                 string StrSQL = "sp_UpdateCustomers";
-                int nRow = provider.ExecuteNonQuery(CommandType.StoredProcedure, StrSQL,
+                nRow = provider.ExecuteNonQuery(CommandType.StoredProcedure, StrSQL,
                     new SqlParameter { ParameterName = "CustomerID", Value = cs.CustomerID },
                     new SqlParameter { ParameterName = "CompanyName", Value = cs.CompanyName },
                     new SqlParameter { ParameterName = "ContactName", Value = cs.ContactName },
@@ -106,6 +112,7 @@ namespace DAO_CSDL
             {
                 provider.DisConnect();
             }
+            return nRow;
         }
 
     }
