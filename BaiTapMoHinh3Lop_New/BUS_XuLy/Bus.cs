@@ -18,6 +18,14 @@ namespace BUS_XuLy
         {
             return a.LayDanhSach();
         }
+        public DataTable TimName(string Name)
+        {
+            return a.TimName(Name);
+        }
+        public DataTable TimID(string ID)
+        {
+            return a.TimID(ID);
+        }
         public int Them(Customers cs)
         {
             return a.Them(cs);
