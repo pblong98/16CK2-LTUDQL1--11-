@@ -14,19 +14,20 @@ namespace BUS_XuLy
     {
         DAO_Customers a = new DAO_Customers();
 
-        DataTable LayDanhSach()
+        public DataTable LayDanhSach()
         {
             return a.LayDanhSach();
         }
-        int Them(Customers cs)
+        public int Them(Customers cs)
         {
-            return a.Sua(cs);
+            return a.Them(cs);
         }
-        int Xoa(Customers cs)
+        public int Xoa(string CustomerID)
         {
-            return a.Sua(cs);
+            return a.Xoa(
+                CustomerID);
         }
-        int Sua(Customers cs)
+        public int Sua(Customers cs)
         {
             return a.Sua(cs);
         }
