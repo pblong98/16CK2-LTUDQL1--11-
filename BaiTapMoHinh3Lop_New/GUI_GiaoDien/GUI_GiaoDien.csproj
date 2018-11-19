@@ -84,6 +84,10 @@
       <Project>{e7fdc3fc-361a-4d1b-a9d6-6acfe160b7b5}</Project>
       <Name>BUS_XuLy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DTO_DinhNghiaDL\DTO_DinhNghiaDL.csproj">
+      <Project>{44f9d26b-7146-4f58-a80b-2f662b06a765}</Project>
+      <Name>DTO_DinhNghiaDL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

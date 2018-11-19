@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS_XuLy;
+using DTO_DinhNghiaDL;
 
 namespace GUI_GiaoDien
 {
