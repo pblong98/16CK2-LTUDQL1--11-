@@ -34,17 +34,17 @@ namespace DTO_DinhNghiaDL
         public Customers() { }
         public Customers(string customerID,string companyName,string contactName,string contactTitle,string address,string city,string region,string postalCode,string country,string phone,string fax)
         {
-            this._customerID = customerID;
-            this._companyName = companyName;
-            this._contactName = contactName;
-            this._contactTitle = contactTitle;
-            this._address = address;
-            this._city = city;
-            this._region = region;
-            this._postalCode = postalCode;
-            this._country =  country;
-            this._phone =  phone;
-            this._fax = fax;
+            this.CustomerID = customerID;
+            this.CompanyName = companyName;
+            this.ContactName = contactName;
+            this.ContactTitle = contactTitle;
+            this.Address = address;
+            this.City = city;
+            this.Region = region;
+            this.PostalCode = postalCode;
+            this.Country =  country;
+            this.Phone =  phone;
+            this.Fax = fax;
         }
     }
 }
