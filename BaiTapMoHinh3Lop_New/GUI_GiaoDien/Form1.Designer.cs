@@ -65,23 +65,23 @@
             this.txtCompanyName = new System.Windows.Forms.TextBox();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvDanhSach
@@ -226,7 +226,7 @@
             this.panel1.Location = new System.Drawing.Point(220, 313);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(981, 190);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 0;
             // 
             // label9
             // 
@@ -335,7 +335,7 @@
             this.label1.Location = new System.Drawing.Point(42, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 20);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 21;
             this.label1.Text = "CustomerID";
             // 
             // txtContactTitle
@@ -343,77 +343,77 @@
             this.txtContactTitle.Location = new System.Drawing.Point(43, 90);
             this.txtContactTitle.Name = "txtContactTitle";
             this.txtContactTitle.Size = new System.Drawing.Size(194, 22);
-            this.txtContactTitle.TabIndex = 1;
+            this.txtContactTitle.TabIndex = 4;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(293, 90);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(194, 22);
-            this.txtAddress.TabIndex = 0;
+            this.txtAddress.TabIndex = 5;
             // 
             // txtPostalCode
             // 
             this.txtPostalCode.Location = new System.Drawing.Point(42, 147);
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(194, 22);
-            this.txtPostalCode.TabIndex = 0;
+            this.txtPostalCode.TabIndex = 8;
             // 
             // txtRegion
             // 
             this.txtRegion.Location = new System.Drawing.Point(784, 90);
             this.txtRegion.Name = "txtRegion";
             this.txtRegion.Size = new System.Drawing.Size(194, 22);
-            this.txtRegion.TabIndex = 0;
+            this.txtRegion.TabIndex = 7;
             // 
             // txtCountry
             // 
             this.txtCountry.Location = new System.Drawing.Point(292, 147);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(194, 22);
-            this.txtCountry.TabIndex = 0;
+            this.txtCountry.TabIndex = 9;
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(542, 147);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(194, 22);
-            this.txtPhone.TabIndex = 0;
+            this.txtPhone.TabIndex = 10;
             // 
             // txtFax
             // 
             this.txtFax.Location = new System.Drawing.Point(783, 147);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(194, 22);
-            this.txtFax.TabIndex = 0;
+            this.txtFax.TabIndex = 11;
             // 
             // txtContactName
             // 
             this.txtContactName.Location = new System.Drawing.Point(542, 30);
             this.txtContactName.Name = "txtContactName";
             this.txtContactName.Size = new System.Drawing.Size(194, 22);
-            this.txtContactName.TabIndex = 0;
+            this.txtContactName.TabIndex = 3;
             // 
             // txtCity
             // 
             this.txtCity.Location = new System.Drawing.Point(543, 90);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(194, 22);
-            this.txtCity.TabIndex = 0;
+            this.txtCity.TabIndex = 6;
             // 
             // txtCompanyName
             // 
             this.txtCompanyName.Location = new System.Drawing.Point(292, 30);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(194, 22);
-            this.txtCompanyName.TabIndex = 0;
+            this.txtCompanyName.TabIndex = 2;
             // 
             // txtCustomerID
             // 
             this.txtCustomerID.Location = new System.Drawing.Point(42, 30);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(194, 22);
-            this.txtCustomerID.TabIndex = 0;
+            this.txtCustomerID.TabIndex = 1;
             // 
             // panel2
             // 
@@ -428,6 +428,64 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1227, 590);
             this.panel2.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txtName);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.txtID);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Location = new System.Drawing.Point(14, 313);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 190);
+            this.panel4.TabIndex = 4;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(4, 147);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(179, 22);
+            this.txtName.TabIndex = 17;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(6, 124);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(123, 20);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "CompanyName";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(4, 90);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(179, 22);
+            this.txtID.TabIndex = 16;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(30, 7);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(122, 29);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Tìm Kiếm";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(6, 67);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(99, 20);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "CustomerID";
             // 
             // label12
             // 
@@ -456,7 +514,7 @@
             this.btnThoat.Location = new System.Drawing.Point(552, 13);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(108, 43);
-            this.btnThoat.TabIndex = 0;
+            this.btnThoat.TabIndex = 15;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -467,7 +525,7 @@
             this.btnSua.Location = new System.Drawing.Point(375, 13);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(108, 43);
-            this.btnSua.TabIndex = 0;
+            this.btnSua.TabIndex = 14;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -478,7 +536,7 @@
             this.btnXoa.Location = new System.Drawing.Point(203, 13);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(108, 43);
-            this.btnXoa.TabIndex = 0;
+            this.btnXoa.TabIndex = 13;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -489,68 +547,10 @@
             this.btnThem.Location = new System.Drawing.Point(33, 13);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(108, 43);
-            this.btnThem.TabIndex = 0;
+            this.btnThem.TabIndex = 12;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txtName);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.txtID);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Location = new System.Drawing.Point(14, 313);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 190);
-            this.panel4.TabIndex = 4;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(6, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 20);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "CustomerID";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(4, 90);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(179, 22);
-            this.txtID.TabIndex = 4;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(6, 124);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(123, 20);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "CompanyName";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(4, 147);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(179, 22);
-            this.txtName.TabIndex = 6;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(30, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(122, 29);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Tìm Kiếm";
             // 
             // Form1
             // 
@@ -563,15 +563,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customers";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
