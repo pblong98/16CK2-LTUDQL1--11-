@@ -37,5 +37,10 @@ namespace _16CK2_LTUDQL1__11_
 			form.Show();
 			this.Close();
 		}
+
+		private void CLOSE_BTN_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }

@@ -45,7 +45,7 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.panel6 = new System.Windows.Forms.Panel();
-			this.button10 = new System.Windows.Forms.Button();
+			this.CLOSE_BTN = new System.Windows.Forms.Button();
 			this.button9 = new System.Windows.Forms.Button();
 			this.button7 = new System.Windows.Forms.Button();
 			this.textBox5 = new System.Windows.Forms.TextBox();
@@ -297,7 +297,7 @@
 			// panel6
 			// 
 			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(44)))), ((int)(((byte)(129)))));
-			this.panel6.Controls.Add(this.button10);
+			this.panel6.Controls.Add(this.CLOSE_BTN);
 			this.panel6.Controls.Add(this.button9);
 			this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
 			this.panel6.Location = new System.Drawing.Point(674, 0);
@@ -305,16 +305,17 @@
 			this.panel6.Size = new System.Drawing.Size(84, 35);
 			this.panel6.TabIndex = 0;
 			// 
-			// button10
+			// CLOSE_BTN
 			// 
-			this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(44)))), ((int)(((byte)(129)))));
-			this.button10.BackgroundImage = global::_16CK2_LTUDQL1__11_.Properties.Resources.close_icon;
-			this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button10.Location = new System.Drawing.Point(43, 5);
-			this.button10.Name = "button10";
-			this.button10.Size = new System.Drawing.Size(28, 25);
-			this.button10.TabIndex = 14;
-			this.button10.UseVisualStyleBackColor = false;
+			this.CLOSE_BTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(44)))), ((int)(((byte)(129)))));
+			this.CLOSE_BTN.BackgroundImage = global::_16CK2_LTUDQL1__11_.Properties.Resources.close_icon;
+			this.CLOSE_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.CLOSE_BTN.Location = new System.Drawing.Point(43, 5);
+			this.CLOSE_BTN.Name = "CLOSE_BTN";
+			this.CLOSE_BTN.Size = new System.Drawing.Size(28, 25);
+			this.CLOSE_BTN.TabIndex = 14;
+			this.CLOSE_BTN.UseVisualStyleBackColor = false;
+			this.CLOSE_BTN.Click += new System.EventHandler(this.CLOSE_BTN_Click);
 			// 
 			// button9
 			// 
@@ -613,7 +614,7 @@
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.Panel panel6;
 		private System.Windows.Forms.Button button9;
-		private System.Windows.Forms.Button button10;
+		private System.Windows.Forms.Button CLOSE_BTN;
 		private System.Windows.Forms.Panel panel7;
 		private System.Windows.Forms.Button BANVE_BTN;
 		private System.Windows.Forms.Panel panel10;
