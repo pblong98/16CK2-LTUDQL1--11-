@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16CK2-LTUDQL1-[11]", "16CK2-LTUDQL1-[11]\16CK2-LTUDQL1-[11].csproj", "{506A84E4-22BD-4613-99F6-049C43D35836}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{506A84E4-22BD-4613-99F6-049C43D35836}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
