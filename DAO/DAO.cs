@@ -151,5 +151,52 @@ namespace DAO
 			provider.DisConnect();
 			return dt;
 		}
+
+		public DataTable dsKhachHang()
+		{
+			provider.Connect();
+			DataTable dt = provider.Select(CommandType.Text, "select * from KhachHang");
+			provider.DisConnect();
+			return dt;
+		}
+
+		public string themKhachHang2(string hoten, string dienthoai, string email, string loai)
+		{
+			string newid = taoIDChoKhachHang();
+			provider.Connect();
+			provider.ExecuteNonQuery(CommandType.Text, "insert into KhachHang values ('" + newid + "','" + hoten + "','" + dienthoai + "', '"+email+"', "+loai+")");
+			provider.DisConnect();
+			return newid;
+		}
+
+		public void xoaKhachHang(string idkh)
+		{
+			provider.Connect();
+			provider.ExecuteNonQuery(CommandType.Text, "delete from KhachHang where ID_KhachHang = '" + idkh + "'");
+			provider.DisConnect();
+		}
+
+		public void updateKhachHang(string idkh, string ten, string email, string sdt, string loai)
+		{
+			provider.Connect();
+			provider.ExecuteNonQuery(CommandType.Text, "update KhachHang set HoTen = '"+ten+"', DienThoai = '"+sdt+"', Email = '"+email+"' , Loai = "+loai[0]+" where ID_KhachHang = '"+idkh+"'");
+			provider.DisConnect();
+		}
+
+		public DataTable timVe(string id)
+		{
+			provider.Connect();
+			DataTable dt = provider.Select(CommandType.Text, "select * from Ve where ID_Ve = '"+id+"'");
+			provider.DisConnect();
+			return dt;
+		}
+
+		public DataTable timKhach(string id)
+		{
+			provider.Connect();
+			DataTable dt = provider.Select(CommandType.Text, "select * from KhachHang where ID_KhachHang = '" + id + "'");
+			provider.DisConnect();
+			return dt;
+		}
 	}
 }

@@ -157,5 +157,9 @@ namespace _16CK2_LTUDQL1__11_
 			
 		}
 
+		private void find_btn_Click(object sender, EventArgs e)
+		{
+			dsve_gridview.DataSource = bus.timVe(find_txt.Text);
+		}
 	}
 }

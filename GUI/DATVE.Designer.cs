@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label2 = new System.Windows.Forms.Label();
 			this.Tenkh_txt = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -52,8 +52,8 @@
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.CLOSE_BTN = new System.Windows.Forms.Button();
 			this.MINITRAY_BTN = new System.Windows.Forms.Button();
-			this.button7 = new System.Windows.Forms.Button();
-			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.find_btn = new System.Windows.Forms.Button();
+			this.find_txt = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.dsve_gridview = new System.Windows.Forms.DataGridView();
@@ -317,9 +317,9 @@
 			// 
 			this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(17)))), ((int)(((byte)(54)))));
 			this.panel3.Controls.Add(this.panel5);
-			this.panel3.Controls.Add(this.button7);
+			this.panel3.Controls.Add(this.find_btn);
 			this.panel3.Controls.Add(this.label1);
-			this.panel3.Controls.Add(this.textBox5);
+			this.panel3.Controls.Add(this.find_txt);
 			this.panel3.Controls.Add(this.label6);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel3.Location = new System.Drawing.Point(233, 0);
@@ -371,35 +371,38 @@
 			this.MINITRAY_BTN.UseVisualStyleBackColor = false;
 			this.MINITRAY_BTN.Click += new System.EventHandler(this.MINITRAY_BTN_Click);
 			// 
-			// button7
+			// find_btn
 			// 
-			this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(17)))), ((int)(((byte)(54)))));
-			this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button7.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-			this.button7.FlatAppearance.BorderSize = 2;
-			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button7.Location = new System.Drawing.Point(720, 71);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(29, 25);
-			this.button7.TabIndex = 13;
-			this.button7.UseVisualStyleBackColor = false;
+			this.find_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(17)))), ((int)(((byte)(54)))));
+			this.find_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.find_btn.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
+			this.find_btn.FlatAppearance.BorderSize = 2;
+			this.find_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.find_btn.ForeColor = System.Drawing.SystemColors.Control;
+			this.find_btn.Location = new System.Drawing.Point(720, 71);
+			this.find_btn.Name = "find_btn";
+			this.find_btn.Size = new System.Drawing.Size(29, 25);
+			this.find_btn.TabIndex = 13;
+			this.find_btn.Text = "🔍";
+			this.find_btn.UseVisualStyleBackColor = false;
+			this.find_btn.Click += new System.EventHandler(this.find_btn_Click);
 			// 
-			// textBox5
+			// find_txt
 			// 
-			this.textBox5.Location = new System.Drawing.Point(613, 74);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(98, 20);
-			this.textBox5.TabIndex = 6;
+			this.find_txt.Location = new System.Drawing.Point(613, 74);
+			this.find_txt.Name = "find_txt";
+			this.find_txt.Size = new System.Drawing.Size(98, 20);
+			this.find_txt.TabIndex = 6;
 			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
 			this.label6.ForeColor = System.Drawing.Color.White;
-			this.label6.Location = new System.Drawing.Point(537, 77);
+			this.label6.Location = new System.Drawing.Point(525, 77);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(70, 13);
+			this.label6.Size = new System.Drawing.Size(82, 13);
 			this.label6.TabIndex = 5;
-			this.label6.Text = "Số điện thoại";
+			this.label6.Text = "Mã khách hàng";
 			// 
 			// panel4
 			// 
@@ -417,14 +420,14 @@
 			this.dsve_gridview.AllowUserToDeleteRows = false;
 			this.dsve_gridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dsve_gridview.BackgroundColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dsve_gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dsve_gridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dsve_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dsve_gridview.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dsve_gridview.Location = new System.Drawing.Point(0, 0);
@@ -672,8 +675,8 @@
 		private System.Windows.Forms.RadioButton dattructiep_radio;
 		private System.Windows.Forms.Button Add_btn;
 		private System.Windows.Forms.Button HuyBTN;
-		private System.Windows.Forms.Button button7;
-		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.Button find_btn;
+		private System.Windows.Forms.TextBox find_txt;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.Panel panel6;

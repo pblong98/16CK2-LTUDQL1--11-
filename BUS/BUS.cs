@@ -56,5 +56,35 @@ namespace BUS
 		{
 			dao.huyve(idve);
 		}
+
+		public DataTable dsKhachHang()
+		{
+			return dao.dsKhachHang();
+		}
+
+		public void themKhachHang2(string hoten, string dienthoai, string email, string loai)
+		{
+			dao.themKhachHang2(hoten, dienthoai, email, loai);
+		}
+
+		public void xoaKhachHang(string idkh)
+		{
+			dao.xoaKhachHang(idkh);
+		}
+
+		public void updateKhachHang(string idkh, string ten, string email, string sdt, string loai)
+		{
+			dao.updateKhachHang(idkh, ten, email, sdt, loai);
+		}
+
+		public DataTable timVe(string id)
+		{
+			return dao.timVe(id);
+		}
+
+		public DataTable timKhach(string id)
+		{
+			return dao.timKhach(id);
+		}
 	}
 }
