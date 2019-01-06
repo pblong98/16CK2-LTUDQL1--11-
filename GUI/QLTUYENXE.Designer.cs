@@ -678,7 +678,7 @@
             this.Name = "QLTUYENXE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QLTUYENXE_FormClosing);
+           
             this.Load += new System.EventHandler(this.QLTUYENXE_Load);
             this.panel1.ResumeLayout(false);
             this.panel10.ResumeLayout(false);

@@ -47,19 +47,14 @@ namespace _16CK2_LTUDQL1__11_
 		private void CLOSE_BTN_Click(object sender, EventArgs e)
 		{
 			this.Close();
-		}
+            Application.Exit();
+        }
 
         private void QLTUYENXE_Load(object sender, EventArgs e)
         {
             reLoad();
         }
 
-        private void QLTUYENXE_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Bạn thật sự muốn thoát chương trình", "Thông báo", MessageBoxButtons.OKCancel) != DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
-        }
+        
     }
 }

@@ -153,8 +153,8 @@ namespace _16CK2_LTUDQL1__11_
 		private void CLOSE_BTN_Click(object sender, EventArgs e)
 		{
 			this.Close();
-
-		}
+            Application.Exit();
+        }
 
 		private void MINITRAY_BTN_Click(object sender, EventArgs e)
 		{
@@ -165,5 +165,7 @@ namespace _16CK2_LTUDQL1__11_
 		{
 			dsve_gridview.DataSource = bus.timVe(find_txt.Text);
 		}
-	}
+
+        
+    }
 }

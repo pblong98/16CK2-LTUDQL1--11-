@@ -41,6 +41,9 @@ namespace _16CK2_LTUDQL1__11_
 		private void CLOSE_BTN_Click(object sender, EventArgs e)
 		{
 			this.Close();
-		}
-	}
+            Application.Exit();
+        }
+
+        
+    }
 }
