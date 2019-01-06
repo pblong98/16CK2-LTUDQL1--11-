@@ -8,10 +8,10 @@ using System.Data;
 
 namespace BUS
 {
-    public class BUS
+    public class Bus
     {
         DAO.DAO dao;
-        public BUS()
+        public Bus()
         {
             dao = new DAO.DAO();
         }
@@ -86,5 +86,10 @@ namespace BUS
         {
             return dao.timKhach(id);
         }
+        public DataTable loadTuyen()
+        {
+            return dao.loadTuyen();
+        }
+
     }
 }

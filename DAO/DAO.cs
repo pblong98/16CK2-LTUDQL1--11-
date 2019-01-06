@@ -198,5 +198,13 @@ namespace DAO
             provider.DisConnect();
             return dt;
         }
+        public DataTable loadTuyen()
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select t.ID_Tuyen,t.KhoangCach,t.ThoiGianChay,t.TenTuyen,t2.TenTram as tram1,t3.TenTram as tram2 from Tuyen t,Tram t2,Tram t3 Where t.Tram_ID_Tram1=t2.ID_Tram and t.Tram_ID_Tram=t3.ID_Tram ");
+            provider.DisConnect();
+            return dt;
+
+        }
     }
 }

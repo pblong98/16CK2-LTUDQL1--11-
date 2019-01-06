@@ -12,11 +12,11 @@ namespace _16CK2_LTUDQL1__11_
 {
 	public partial class QLKHACH : Form
 	{
-		BUS.BUS bus;
+		BUS.Bus bus;
 		public QLKHACH()
 		{
 			InitializeComponent();
-			bus = new BUS.BUS();
+			bus = new BUS.Bus();
 			LoadDSKhachHang();
 		}
 

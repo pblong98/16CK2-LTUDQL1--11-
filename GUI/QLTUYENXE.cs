@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace _16CK2_LTUDQL1__11_
 {
 	public partial class QLTUYENXE : Form
+
 	{
+        Bus bus =new Bus();
 		public QLTUYENXE()
 		{
 			InitializeComponent();
 		}
-
+        public void reLoad()
+        {
+            dgvTuyenXe.DataSource = bus.loadTuyen();
+        }
 		private void BANVE_BTN_Click(object sender, EventArgs e)
 		{
 			QLVE form = new QLVE();
@@ -42,5 +48,18 @@ namespace _16CK2_LTUDQL1__11_
 		{
 			this.Close();
 		}
-	}
+
+        private void QLTUYENXE_Load(object sender, EventArgs e)
+        {
+            reLoad();
+        }
+
+        private void QLTUYENXE_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn thật sự muốn thoát chương trình", "Thông báo", MessageBoxButtons.OKCancel) != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
+    }
 }

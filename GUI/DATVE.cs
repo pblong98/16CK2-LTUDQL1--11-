@@ -13,12 +13,12 @@ namespace _16CK2_LTUDQL1__11_
 {
     public partial class QLVE : Form
     {
-		BUS.BUS bus;
+		BUS.Bus bus;
 
 
         public QLVE()
         {
-			bus = new BUS.BUS();
+			bus = new BUS.Bus();
             InitializeComponent();
 			LoadDanhSachTuyenCBB();
 			dattructiep_radio.Checked = true;
@@ -139,7 +139,7 @@ namespace _16CK2_LTUDQL1__11_
 			//Tạo form
 			QLTUYENXE form = new QLTUYENXE();
 			form.Show();
-            this.Visible = false;
+           this.Visible = false;
         }
 
 		private void CHUYENXE_BTN_Click(object sender, EventArgs e)
