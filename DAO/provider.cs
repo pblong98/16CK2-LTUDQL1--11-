@@ -10,7 +10,7 @@ namespace DAO
 {
 	class Provider
 	{
-		static string SqlConnectionstring = @"Data Source=DESKTOP-4P58K4I;Initial Catalog=QUANLYVEXE;Integrated Security=True";
+		static string SqlConnectionstring = @"Data Source=DESKTOP-OLD2TKG\SQLEXPRESS;Initial Catalog=QUANLYVEXE;Integrated Security=True";
 		public SqlConnection Connection { get; set; }
 
 		public void Connect()

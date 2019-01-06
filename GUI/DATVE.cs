@@ -130,26 +130,30 @@ namespace _16CK2_LTUDQL1__11_
 		{
 			//Tạo form
 			QLKHACH form = new QLKHACH();
-			form.Show();	
-		}
+			form.Show();
+            this.Visible = false;
+        }
 
 		private void TUYENXE_BTN_Click(object sender, EventArgs e)
 		{
 			//Tạo form
 			QLTUYENXE form = new QLTUYENXE();
 			form.Show();
-		}
+            this.Visible = false;
+        }
 
 		private void CHUYENXE_BTN_Click(object sender, EventArgs e)
 		{
 			//Tạo form
 			QLCHUYENXEcs form = new QLCHUYENXEcs();
 			form.Show();
-		}
+            this.Visible = false;
+        }
 
 		private void CLOSE_BTN_Click(object sender, EventArgs e)
 		{
 			this.Close();
+
 		}
 
 		private void MINITRAY_BTN_Click(object sender, EventArgs e)
