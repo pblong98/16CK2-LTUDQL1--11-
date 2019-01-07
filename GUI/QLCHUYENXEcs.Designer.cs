@@ -51,12 +51,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvChuyenXe = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collum6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -72,6 +66,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtMaChuyen = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.Chuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaiXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -392,12 +392,12 @@
             this.dgvChuyenXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvChuyenXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChuyenXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.Column1,
-            this.Column2,
-            this.collum6,
-            this.Column5,
-            this.Column4});
+            this.Chuyen,
+            this.Tuyen,
+            this.GioKhoiHanh,
+            this.MaXe,
+            this.TaiXe,
+            this.GhiChu});
             this.dgvChuyenXe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvChuyenXe.Location = new System.Drawing.Point(0, 0);
             this.dgvChuyenXe.Margin = new System.Windows.Forms.Padding(4);
@@ -406,42 +406,6 @@
             this.dgvChuyenXe.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvChuyenXe.Size = new System.Drawing.Size(1010, 375);
             this.dgvChuyenXe.TabIndex = 0;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Chuyến";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tuyến";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Giờ khởi hành";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // collum6
-            // 
-            this.collum6.HeaderText = "Mã xe";
-            this.collum6.Name = "collum6";
-            this.collum6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tài xế";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Ghi chú";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // button8
             // 
@@ -596,6 +560,48 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Chuyến xe";
             // 
+            // Chuyen
+            // 
+            this.Chuyen.DataPropertyName = "ID_Chuyen";
+            this.Chuyen.HeaderText = "Chuyến";
+            this.Chuyen.Name = "Chuyen";
+            this.Chuyen.ReadOnly = true;
+            // 
+            // Tuyen
+            // 
+            this.Tuyen.DataPropertyName = "TenTuyen";
+            this.Tuyen.HeaderText = "Tuyến";
+            this.Tuyen.Name = "Tuyen";
+            this.Tuyen.ReadOnly = true;
+            // 
+            // GioKhoiHanh
+            // 
+            this.GioKhoiHanh.DataPropertyName = "Gio_Khoi_Hanh";
+            this.GioKhoiHanh.HeaderText = "Giờ khởi hành";
+            this.GioKhoiHanh.Name = "GioKhoiHanh";
+            this.GioKhoiHanh.ReadOnly = true;
+            // 
+            // MaXe
+            // 
+            this.MaXe.DataPropertyName = "TenXe";
+            this.MaXe.HeaderText = "Mã xe";
+            this.MaXe.Name = "MaXe";
+            this.MaXe.ReadOnly = true;
+            // 
+            // TaiXe
+            // 
+            this.TaiXe.DataPropertyName = "TenTaiXe";
+            this.TaiXe.HeaderText = "Tài xế";
+            this.TaiXe.Name = "TaiXe";
+            this.TaiXe.ReadOnly = true;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "Ghi_Chu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.ReadOnly = true;
+            // 
             // QLCHUYENXEcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -625,6 +631,7 @@
             this.Name = "QLCHUYENXEcs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.QLCHUYENXEcs_Load);
             this.panel1.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -676,17 +683,17 @@
 		private System.Windows.Forms.ComboBox cbTaiXe;
 		private System.Windows.Forms.Button QLKHACH_BTN;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn collum6;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
 		private System.Windows.Forms.ComboBox cbMaXe;
 		private System.Windows.Forms.DateTimePicker dptThoiGian;
 		private System.Windows.Forms.RichTextBox txtGhiChu;
 		private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMaChuyen;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Chuyen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tuyen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioKhoiHanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TaiXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
     }
 }

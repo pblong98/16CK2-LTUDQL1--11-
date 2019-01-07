@@ -134,5 +134,9 @@ namespace BUS
         {
             return dao.TimTenTuyen(tenTuyen);
         }
+        public DataTable loadChuyen()
+        {
+            return dao.LoadChuyenXe();
+        }
     }
 }

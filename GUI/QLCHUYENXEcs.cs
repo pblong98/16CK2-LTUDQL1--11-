@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace _16CK2_LTUDQL1__11_
 {
@@ -16,7 +17,7 @@ namespace _16CK2_LTUDQL1__11_
 		{
 			InitializeComponent();
 		}
-
+        Bus bus = new Bus();
 		private void TUYENXE_BTN_Click(object sender, EventArgs e)
 		{
 			QLTUYENXE form = new QLTUYENXE();
@@ -44,6 +45,13 @@ namespace _16CK2_LTUDQL1__11_
             Application.Exit();
         }
 
-        
+        private void QLCHUYENXEcs_Load(object sender, EventArgs e)
+        {
+            reLoad();
+        }
+        void reLoad()
+        {
+            dgvChuyenXe.DataSource = bus.loadChuyen();
+        }
     }
 }
