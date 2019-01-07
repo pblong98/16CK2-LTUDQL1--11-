@@ -92,8 +92,7 @@ namespace _16CK2_LTUDQL1__11_
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            TuyenXe tx = new TuyenXe();
-            
+            TuyenXe tx = new TuyenXe();          
             tx.IdTuyen = txtID.Text;
             tx.KhoanCach= Convert.ToDouble(txtKhoanCach.Text.ToString());
             tx.ThoiGian = txtThoiGian.Text;
@@ -102,6 +101,24 @@ namespace _16CK2_LTUDQL1__11_
             tx.TenTuyen= txtTenTuyen.Text;
             bus.suaTuyen(tx);
             reLoad();
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsSymbol(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Vui lòng nhập số");
+            }
+        }
+
+        private void txtKhoanCach_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsSymbol(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Vui lòng nhập số");
+            }
         }
     }
 }
