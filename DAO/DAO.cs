@@ -213,6 +213,7 @@ namespace DAO
             provider.DisConnect();
             return dt;
         }
+      
         public DataTable LoadTram(string TenTram)
         {
             provider.Connect();
@@ -246,6 +247,7 @@ namespace DAO
             provider.DisConnect();
             return nRow;
         }
+      
         public DataTable TimTenTuyen(string TenTuyen)
         {
             provider.Connect();
