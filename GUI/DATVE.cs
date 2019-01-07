@@ -166,6 +166,13 @@ namespace _16CK2_LTUDQL1__11_
 			dsve_gridview.DataSource = bus.timVe(find_txt.Text);
 		}
 
-        
+        private void std_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsSymbol(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Vui lòng nhập số");
+            }
+        }
     }
 }
