@@ -53,6 +53,8 @@ namespace _16CK2_LTUDQL1__11_
         {
             dgvChuyenXe.DataSource = bus.loadChuyen();
             cbTuyenXe.DataSource = bus.loadTenTuyen();
+            cbTaiXe.DataSource = bus.loadTenTaiXe();
+            cbMaXe.DataSource = bus.loadTenXe();
         }
 
         private void dgvChuyenXe_CellContentClick(object sender, DataGridViewCellEventArgs e)

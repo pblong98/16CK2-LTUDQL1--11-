@@ -147,5 +147,23 @@ namespace BUS
             }
             return TenTuyen;
         }
+        public List<String> loadTenXe()
+        {
+            List<string> TenXe = new List<string>();
+            foreach (DataRow row in dao.loadTenXe().Rows)
+            {
+                TenXe.Add(row["TenXe"].ToString());
+            }
+            return TenXe;
+        }
+        public List<String> loadTenTaiXe()
+        {
+            List<string> TenTaiXe = new List<string>();
+            foreach (DataRow row in dao.loadTenTaiXe().Rows)
+            {
+                TenTaiXe.Add(row["TenTaiXe"].ToString());
+            }
+            return TenTaiXe;
+        }
     }
 }
