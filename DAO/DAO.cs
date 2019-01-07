@@ -271,6 +271,13 @@ namespace DAO
             provider.DisConnect();
             return dt;
         }
+        public DataTable loadTenTuyen(string ten)
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select ID_Tuyen from Tuyen where TenTuyen = N'" + ten + "'");
+            provider.DisConnect();
+            return dt;
+        }
         public DataTable loadTenXe()
         {
             provider.Connect();
@@ -278,10 +285,24 @@ namespace DAO
             provider.DisConnect();
             return dt;
         }
+        public DataTable loadTenXe(string ten)
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select XeID from Xe where TenXe = N'" + ten + "'");     
+            provider.DisConnect();
+            return dt;
+        }
         public DataTable loadTenTaiXe()
         {
             provider.Connect();
             DataTable dt = provider.Select(CommandType.Text, "select TenTaiXe from Tai_Xe");
+            provider.DisConnect();
+            return dt;
+        }
+        public DataTable loadTenTaiXe(string ten)
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select ID_TaiXe from Tai_Xe where = N'" + ten+"'");
             provider.DisConnect();
             return dt;
         }
