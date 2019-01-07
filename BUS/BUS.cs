@@ -94,7 +94,16 @@ namespace BUS
         public List<String> loadTram()
         {
             List<string> tenTram = new List<string>();
-            foreach (DataRow row in dao.loadTram().Rows)
+            foreach (DataRow row in dao.LoadTram().Rows)
+            {
+                tenTram.Add(row["tenTram"].ToString());
+            }
+            return tenTram;
+        }
+        public List<String> loadTramTG()
+        {
+            List<string> tenTram = new List<string>();
+            foreach (DataRow row in dao.LoadTram().Rows)
             {
                 tenTram.Add(row["tenTram"].ToString());
             }
@@ -103,20 +112,22 @@ namespace BUS
         }
         public int themTuyen(TuyenXe tx)
         {
-            DataTable d1 = dao.loadTrama(tx.Tram1);
-            DataTable d2 = dao.loadTramb(tx.Tram2);
-            foreach (DataRow row in d1.Rows)
+            
+            foreach (DataRow row in dao.LoadTram(tx.Tram1).Rows)
             {
-                tx.Tram1=(row["ID_Tram"].ToString());
+                tx.Tram1=row["ID_Tram"].ToString();
             }
-            foreach (DataRow row2 in d2.Rows)
+            foreach (DataRow row2 in dao.LoadTram(tx.Tram2).Rows)
             {
-                tx.Tram2 = (row2["ID_Tram"].ToString());
+                tx.Tram2 = row2["ID_Tram"].ToString();
             }
           
             //tx.TramTG =dao.loadTram(tx.Tram1).ToString();
             return dao.ThemTuyen(tx);
         }
-
+        public int xoaTuyen(int id)
+        {
+            return dao.XoaTuyen(id);
+        }
     }
 }

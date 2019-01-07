@@ -24,7 +24,7 @@ namespace _16CK2_LTUDQL1__11_
             dgvTuyenXe.DataSource = bus.loadTuyen();
             cbTram1.DataSource = bus.loadTram();
             cbTram2.DataSource = bus.loadTram();
-            cbTramTrungGian.DataSource = bus.loadTram();
+            cbTramTrungGian.DataSource = bus.loadTramTG();
         }
 		private void BANVE_BTN_Click(object sender, EventArgs e)
 		{
@@ -79,6 +79,14 @@ namespace _16CK2_LTUDQL1__11_
             tx.Tram1=cbTram1.Text;
             tx.Tram2 = cbTram2.Text;
             bus.themTuyen(tx);
+            reLoad();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int CurrentIndex = dgvTuyenXe.CurrentCell.RowIndex;
+            int ID = Convert.ToInt32(dgvTuyenXe.Rows[CurrentIndex].Cells["ID"].Value.ToString());
+            bus.xoaTuyen(ID);
             reLoad();
         }
     }
