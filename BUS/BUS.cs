@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAO;
 using System.Data;
+using DTO;
 
 namespace BUS
 {
@@ -99,6 +100,22 @@ namespace BUS
             }
             tenTram.Add("NULL");
             return tenTram;
+        }
+        public int themTuyen(TuyenXe tx)
+        {
+            DataTable d1 = dao.loadTrama(tx.Tram1);
+            DataTable d2 = dao.loadTramb(tx.Tram2);
+            foreach (DataRow row in d1.Rows)
+            {
+                tx.Tram1=(row["ID_Tram"].ToString());
+            }
+            foreach (DataRow row2 in d2.Rows)
+            {
+                tx.Tram2 = (row2["ID_Tram"].ToString());
+            }
+          
+            //tx.TramTG =dao.loadTram(tx.Tram1).ToString();
+            return dao.ThemTuyen(tx);
         }
 
     }

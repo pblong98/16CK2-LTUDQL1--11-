@@ -78,6 +78,8 @@ namespace _16CK2_LTUDQL1__11_
             tx.TenTuyen = txtTenTuyen.Text;
             tx.Tram1=cbTram1.Text;
             tx.Tram2 = cbTram2.Text;
+            bus.themTuyen(tx);
+            reLoad();
         }
     }
 }

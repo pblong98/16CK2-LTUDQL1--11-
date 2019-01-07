@@ -208,11 +208,34 @@ namespace DAO
         }
         public DataTable loadTram()
         {
-            provider.Connect();
-            List<string> dsLop = new List<string>();
+            provider.Connect();           
             DataTable dt = provider.Select(CommandType.Text, "select * from Tram ");
             provider.DisConnect();
             return dt;
+        }
+        public DataTable loadTrama(string TenTram)
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select ID_Tram from Tram where TenTram = N'" + TenTram + "'");
+            provider.DisConnect();
+            return dt;
+        }
+        public DataTable loadTramb(string TenTram)
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select ID_Tram from Tram where TenTram = N'" + TenTram + "'");
+            provider.DisConnect();
+            return dt;
+        }
+
+        public int ThemTuyen(TuyenXe tx)
+        {
+            provider.Connect();
+            int t1 = Convert.ToInt32(tx.Tram1);
+            int t2 = Convert.ToInt32(tx.Tram2);
+            int nRow = provider.ExecuteNonQuery(CommandType.Text, "insert into Tuyen values ('" + tx.IdTuyen + "','" + tx.KhoanCach + "','" + tx.ThoiGian + "', " + t1 + "," + t2 + ",N'" + tx.TenTuyen + "')");
+            provider.DisConnect();
+            return nRow;
         }
     }
 }
