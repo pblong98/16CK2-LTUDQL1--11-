@@ -47,8 +47,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.CLOSE_BTN = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTimTen = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvTuyenXe = new System.Windows.Forms.DataGridView();
@@ -290,9 +289,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(17)))), ((int)(((byte)(54)))));
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.txtTimTen);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(311, 0);
@@ -348,27 +346,14 @@
             this.button9.TabIndex = 14;
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // txtTimTen
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(17)))), ((int)(((byte)(54)))));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.button7.FlatAppearance.BorderSize = 2;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(960, 87);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(39, 31);
-            this.button7.TabIndex = 13;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(817, 91);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(129, 22);
-            this.textBox5.TabIndex = 6;
+            this.txtTimTen.Location = new System.Drawing.Point(817, 91);
+            this.txtTimTen.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimTen.Name = "txtTimTen";
+            this.txtTimTen.Size = new System.Drawing.Size(129, 22);
+            this.txtTimTen.TabIndex = 6;
+            this.txtTimTen.TextChanged += new System.EventHandler(this.txtTimTen_TextChanged);
             // 
             // label6
             // 
@@ -377,9 +362,9 @@
             this.label6.Location = new System.Drawing.Point(716, 95);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 17);
+            this.label6.Size = new System.Drawing.Size(77, 17);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Số điện thoại";
+            this.label6.Text = "Tên Tuyến";
             // 
             // panel4
             // 
@@ -705,8 +690,7 @@
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.DataGridView dgvTuyenXe;
-		private System.Windows.Forms.Button button7;
-		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox txtTimTen;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.Panel panel6;

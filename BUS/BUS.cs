@@ -139,5 +139,9 @@ namespace BUS
         {
             return dao.XoaTuyen(id);
         }
+        public DataTable timTuyen(string tenTuyen)
+        {
+            return dao.TimTenTuyen(tenTuyen);
+        }
     }
 }

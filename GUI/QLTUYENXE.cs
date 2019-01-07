@@ -120,5 +120,11 @@ namespace _16CK2_LTUDQL1__11_
                 MessageBox.Show("Vui lòng nhập số");
             }
         }
+
+        private void txtTimTen_TextChanged(object sender, EventArgs e)
+        {
+            string ten = txtTimTen.Text.ToString();
+           dgvTuyenXe.DataSource= bus.timTuyen(ten);
+        }
     }
 }

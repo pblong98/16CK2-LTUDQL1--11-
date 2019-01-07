@@ -246,5 +246,12 @@ namespace DAO
             provider.DisConnect();
             return nRow;
         }
+        public DataTable TimTenTuyen(string TenTuyen)
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select * from Tuyen where TenTuyen like N'%" + TenTuyen + "%'");
+            provider.DisConnect();
+            return dt;
+        }
     }
 }
