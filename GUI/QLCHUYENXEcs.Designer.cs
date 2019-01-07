@@ -56,7 +56,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTuyenXe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbTaiXe = new System.Windows.Forms.ComboBox();
@@ -72,6 +71,7 @@
             this.MaXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TaiXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbTuyenXe = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -461,14 +461,6 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Thời gian";
             // 
-            // txtTuyenXe
-            // 
-            this.txtTuyenXe.Location = new System.Drawing.Point(396, 556);
-            this.txtTuyenXe.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTuyenXe.Name = "txtTuyenXe";
-            this.txtTuyenXe.Size = new System.Drawing.Size(239, 22);
-            this.txtTuyenXe.TabIndex = 23;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -511,6 +503,7 @@
             // 
             // dptThoiGian
             // 
+            this.dptThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dptThoiGian.Location = new System.Drawing.Point(814, 521);
             this.dptThoiGian.Margin = new System.Windows.Forms.Padding(4);
             this.dptThoiGian.Name = "dptThoiGian";
@@ -599,6 +592,15 @@
             this.GhiChu.Name = "GhiChu";
             this.GhiChu.ReadOnly = true;
             // 
+            // cbTuyenXe
+            // 
+            this.cbTuyenXe.FormattingEnabled = true;
+            this.cbTuyenXe.Location = new System.Drawing.Point(396, 557);
+            this.cbTuyenXe.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTuyenXe.Name = "cbTuyenXe";
+            this.cbTuyenXe.Size = new System.Drawing.Size(239, 24);
+            this.cbTuyenXe.TabIndex = 29;
+            // 
             // QLCHUYENXEcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -607,6 +609,7 @@
             this.ClientSize = new System.Drawing.Size(1321, 672);
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.dptThoiGian);
+            this.Controls.Add(this.cbTuyenXe);
             this.Controls.Add(this.cbMaXe);
             this.Controls.Add(this.cbTaiXe);
             this.Controls.Add(this.panel4);
@@ -618,7 +621,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaChuyen);
-            this.Controls.Add(this.txtTuyenXe);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
@@ -674,7 +676,6 @@
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox txtTuyenXe;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.ComboBox cbTaiXe;
@@ -692,5 +693,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaXe;
         private System.Windows.Forms.DataGridViewTextBoxColumn TaiXe;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        private System.Windows.Forms.ComboBox cbTuyenXe;
     }
 }

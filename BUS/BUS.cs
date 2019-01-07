@@ -138,5 +138,14 @@ namespace BUS
         {
             return dao.LoadChuyenXe();
         }
+        public List<String> loadTenTuyen()
+        {
+            List<string> TenTuyen = new List<string>();
+            foreach (DataRow row in dao.loadTenTuyen().Rows)
+            {
+                TenTuyen.Add(row["TenTuyen"].ToString());
+            }
+            return TenTuyen;
+        }
     }
 }

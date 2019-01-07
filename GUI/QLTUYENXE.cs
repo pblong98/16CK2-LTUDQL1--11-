@@ -66,8 +66,7 @@ namespace _16CK2_LTUDQL1__11_
             txtThoiGian.Text= dgvTuyenXe.Rows[CurrentIndex].Cells["ThoiGianChay"].Value.ToString();
             txtTenTuyen.Text = dgvTuyenXe.Rows[CurrentIndex].Cells["TenTuyen"].Value.ToString();
             cbTram1.Text = dgvTuyenXe.Rows[CurrentIndex].Cells["Tram1"].Value.ToString();
-            cbTram2.Text = dgvTuyenXe.Rows[CurrentIndex].Cells["Tram2"].Value.ToString();
-            
+            cbTram2.Text = dgvTuyenXe.Rows[CurrentIndex].Cells["Tram2"].Value.ToString(); 
         }
 
         private void btnThem_Click(object sender, EventArgs e)

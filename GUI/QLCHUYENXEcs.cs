@@ -52,6 +52,7 @@ namespace _16CK2_LTUDQL1__11_
         void reLoad()
         {
             dgvChuyenXe.DataSource = bus.loadChuyen();
+            cbTuyenXe.DataSource = bus.loadTenTuyen();
         }
 
         private void dgvChuyenXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -59,7 +60,7 @@ namespace _16CK2_LTUDQL1__11_
             int CurrentIndex =dgvChuyenXe.CurrentCell.RowIndex;
             txtGhiChu.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["GhiChu"].Value.ToString();
             txtMaChuyen.Text= dgvChuyenXe.Rows[CurrentIndex].Cells["Chuyen"].Value.ToString();
-            txtTuyenXe.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["Tuyen"].Value.ToString();
+            cbTuyenXe.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["Tuyen"].Value.ToString();
             cbMaXe.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["MaXe"].Value.ToString();
             cbTaiXe.Text= dgvChuyenXe.Rows[CurrentIndex].Cells["TaiXe"].Value.ToString();
             DateTime a = new DateTime();

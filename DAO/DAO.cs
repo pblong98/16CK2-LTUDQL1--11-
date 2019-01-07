@@ -264,5 +264,26 @@ namespace DAO
             provider.DisConnect();
             return dt;
         }
+        public DataTable loadTenTuyen()
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select TenTuyen from Tuyen");
+            provider.DisConnect();
+            return dt;
+        }
+        public DataTable loadTenXe()
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select TenXe from Xe");
+            provider.DisConnect();
+            return dt;
+        }
+        public DataTable loadTenTaiXe()
+        {
+            provider.Connect();
+            DataTable dt = provider.Select(CommandType.Text, "select TenTaiXe from Tai_Xe");
+            provider.DisConnect();
+            return dt;
+        }
     }
 }
