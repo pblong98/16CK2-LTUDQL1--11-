@@ -100,16 +100,7 @@ namespace BUS
             }
             return tenTram;
         }
-        public List<String> loadTramTG()
-        {
-            List<string> tenTram = new List<string>();
-            foreach (DataRow row in dao.LoadTram().Rows)
-            {
-                tenTram.Add(row["tenTram"].ToString());
-            }
-            tenTram.Add("NULL");
-            return tenTram;
-        }
+       
         public int themTuyen(TuyenXe tx)
         {
             
