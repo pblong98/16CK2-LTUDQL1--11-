@@ -306,5 +306,15 @@ namespace DAO
             provider.DisConnect();
             return dt;
         }
+        public int ThemChuyen(ChuyenXe cx)
+        {
+            provider.Connect();
+            int idTuyen = Convert.ToInt32(cx.Tuyen);
+            int idXe = Convert.ToInt32(cx.Xe);
+            int idTaiXe = Convert.ToInt32(cx.TaiXe);
+            int nRow = provider.ExecuteNonQuery(CommandType.Text, "insert into Chuyen values (" + cx.ChuyenID + "," + idTuyen + "," + cx.GioKhoiHanh + ", " + idXe + "," + idTaiXe + ")");
+            provider.DisConnect();
+            return nRow;
+        }
     }
 }
