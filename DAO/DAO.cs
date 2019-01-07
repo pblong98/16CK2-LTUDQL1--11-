@@ -258,7 +258,7 @@ namespace DAO
         public DataTable LoadChuyenXe()
         {
             provider.Connect();
-            DataTable dt = provider.Select(CommandType.Text, "select c.ID_Chuyen,t.TenTuyen,c.Gio_Khoi_Hanh,x.TenXe,tx.TenTaiXe" +
+            DataTable dt = provider.Select(CommandType.Text, "select c.ID_Chuyen,c.Ghi_Chu,t.TenTuyen,c.Gio_Khoi_Hanh,x.TenXe,tx.TenTaiXe" +
                 " from Chuyen c,Xe x,Tai_Xe tx,Tuyen t " +
                 "where c.Tuyen_ID_Tuyen=t.ID_Tuyen and c.Xe_XeID=x.XeID and c.Tai_xe_ID_TaiXe=tx.ID_TaiXe");
             provider.DisConnect();

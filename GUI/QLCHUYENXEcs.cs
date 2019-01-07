@@ -53,5 +53,19 @@ namespace _16CK2_LTUDQL1__11_
         {
             dgvChuyenXe.DataSource = bus.loadChuyen();
         }
+
+        private void dgvChuyenXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int CurrentIndex =dgvChuyenXe.CurrentCell.RowIndex;
+            txtGhiChu.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["GhiChu"].Value.ToString();
+            txtMaChuyen.Text= dgvChuyenXe.Rows[CurrentIndex].Cells["Chuyen"].Value.ToString();
+            txtTuyenXe.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["Tuyen"].Value.ToString();
+            cbMaXe.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["MaXe"].Value.ToString();
+            cbTaiXe.Text= dgvChuyenXe.Rows[CurrentIndex].Cells["TaiXe"].Value.ToString();
+            DateTime a = new DateTime();
+            a = Convert.ToDateTime(dgvChuyenXe.Rows[CurrentIndex].Cells["GioKhoiHanh"].Value);
+            dptThoiGian.ShowUpDown = true;
+            dptThoiGian.Value = a;
+        }
     }
 }
