@@ -51,6 +51,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvChuyenXe = new System.Windows.Forms.DataGridView();
+            this.Chuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaiXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -65,12 +71,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtMaChuyen = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.Chuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioKhoiHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaiXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbTuyenXe = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -409,6 +409,48 @@
             this.dgvChuyenXe.TabIndex = 0;
             this.dgvChuyenXe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChuyenXe_CellContentClick);
             // 
+            // Chuyen
+            // 
+            this.Chuyen.DataPropertyName = "ID_Chuyen";
+            this.Chuyen.HeaderText = "Chuyến";
+            this.Chuyen.Name = "Chuyen";
+            this.Chuyen.ReadOnly = true;
+            // 
+            // Tuyen
+            // 
+            this.Tuyen.DataPropertyName = "TenTuyen";
+            this.Tuyen.HeaderText = "Tuyến";
+            this.Tuyen.Name = "Tuyen";
+            this.Tuyen.ReadOnly = true;
+            // 
+            // GioKhoiHanh
+            // 
+            this.GioKhoiHanh.DataPropertyName = "Gio_Khoi_Hanh";
+            this.GioKhoiHanh.HeaderText = "Giờ khởi hành";
+            this.GioKhoiHanh.Name = "GioKhoiHanh";
+            this.GioKhoiHanh.ReadOnly = true;
+            // 
+            // MaXe
+            // 
+            this.MaXe.DataPropertyName = "TenXe";
+            this.MaXe.HeaderText = "Mã xe";
+            this.MaXe.Name = "MaXe";
+            this.MaXe.ReadOnly = true;
+            // 
+            // TaiXe
+            // 
+            this.TaiXe.DataPropertyName = "TenTaiXe";
+            this.TaiXe.HeaderText = "Tài xế";
+            this.TaiXe.Name = "TaiXe";
+            this.TaiXe.ReadOnly = true;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "Ghi_Chu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.ReadOnly = true;
+            // 
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(1209, 582);
@@ -550,48 +592,6 @@
             this.label8.Size = new System.Drawing.Size(74, 17);
             this.label8.TabIndex = 18;
             this.label8.Text = "Chuyến xe";
-            // 
-            // Chuyen
-            // 
-            this.Chuyen.DataPropertyName = "ID_Chuyen";
-            this.Chuyen.HeaderText = "Chuyến";
-            this.Chuyen.Name = "Chuyen";
-            this.Chuyen.ReadOnly = true;
-            // 
-            // Tuyen
-            // 
-            this.Tuyen.DataPropertyName = "TenTuyen";
-            this.Tuyen.HeaderText = "Tuyến";
-            this.Tuyen.Name = "Tuyen";
-            this.Tuyen.ReadOnly = true;
-            // 
-            // GioKhoiHanh
-            // 
-            this.GioKhoiHanh.DataPropertyName = "Gio_Khoi_Hanh";
-            this.GioKhoiHanh.HeaderText = "Giờ khởi hành";
-            this.GioKhoiHanh.Name = "GioKhoiHanh";
-            this.GioKhoiHanh.ReadOnly = true;
-            // 
-            // MaXe
-            // 
-            this.MaXe.DataPropertyName = "TenXe";
-            this.MaXe.HeaderText = "Mã xe";
-            this.MaXe.Name = "MaXe";
-            this.MaXe.ReadOnly = true;
-            // 
-            // TaiXe
-            // 
-            this.TaiXe.DataPropertyName = "TenTaiXe";
-            this.TaiXe.HeaderText = "Tài xế";
-            this.TaiXe.Name = "TaiXe";
-            this.TaiXe.ReadOnly = true;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "Ghi_Chu";
-            this.GhiChu.HeaderText = "Ghi chú";
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.ReadOnly = true;
             // 
             // cbTuyenXe
             // 

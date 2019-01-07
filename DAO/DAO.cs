@@ -302,7 +302,7 @@ namespace DAO
         public DataTable loadTenTaiXe(string ten)
         {
             provider.Connect();
-            DataTable dt = provider.Select(CommandType.Text, "select ID_TaiXe from Tai_Xe where = N'" + ten+"'");
+            DataTable dt = provider.Select(CommandType.Text, "select ID_TaiXe from Tai_Xe where TenTaiXe = N'" + ten+"'");
             provider.DisConnect();
             return dt;
         }
@@ -312,7 +312,7 @@ namespace DAO
             int idTuyen = Convert.ToInt32(cx.Tuyen);
             int idXe = Convert.ToInt32(cx.Xe);
             int idTaiXe = Convert.ToInt32(cx.TaiXe);
-            int nRow = provider.ExecuteNonQuery(CommandType.Text, "insert into Chuyen values (" + cx.ChuyenID + "," + idTuyen + "," + cx.GioKhoiHanh + ", " + idXe + "," + idTaiXe + ")");
+            int nRow = provider.ExecuteNonQuery(CommandType.Text, "insert into Chuyen values (" + cx.ChuyenID + "," + idTuyen + ",'" + cx.GioKhoiHanh + "','" + cx.GhiChu + "'," + idXe + "," + idTaiXe + ")");
             provider.DisConnect();
             return nRow;
         }

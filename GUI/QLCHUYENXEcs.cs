@@ -79,9 +79,10 @@ namespace _16CK2_LTUDQL1__11_
             cx.Tuyen = cbTuyenXe.Text.ToString();
             cx.Xe = cbMaXe.Text.ToString();
             cx.TaiXe = cbTaiXe.Text.ToString();
-            cx.GioKhoiHanh = Convert.ToDateTime(dtpThoiGian.Text);
+            cx.GioKhoiHanh = dtpThoiGian.Text.ToString();
             cx.GhiChu = txtGhiChu.Text.ToString();
             bus.themChuyen(cx);
+            reLoad();
         }
     }
 }
