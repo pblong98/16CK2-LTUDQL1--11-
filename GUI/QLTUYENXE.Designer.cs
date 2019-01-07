@@ -52,23 +52,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvTuyenXe = new System.Windows.Forms.DataGridView();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhoanCach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +59,23 @@
             this.Tram1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tram2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TramTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtKhoanCach = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbTram2 = new System.Windows.Forms.ComboBox();
+            this.cbTram1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTenTuyen = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbTramTrungGian = new System.Windows.Forms.ComboBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtThoiGian = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -421,183 +421,10 @@
             this.dgvTuyenXe.Name = "dgvTuyenXe";
             this.dgvTuyenXe.ReadOnly = true;
             this.dgvTuyenXe.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvTuyenXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTuyenXe.Size = new System.Drawing.Size(1010, 375);
             this.dgvTuyenXe.TabIndex = 0;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(737, 626);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 31);
-            this.button8.TabIndex = 26;
-            this.button8.Text = "Sửa";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(875, 626);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 31);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "Xóa";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(603, 626);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 31);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(896, 519);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Trạm 1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(347, 576);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Thời gian";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(624, 516);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 22);
-            this.textBox1.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(525, 519);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Khoảng cách";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(896, 588);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 17);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Trạm 2";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "PREMIUM",
-            "BASIC"});
-            this.comboBox1.Location = new System.Drawing.Point(981, 585);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(239, 24);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "PREMIUM",
-            "BASIC"});
-            this.comboBox2.Location = new System.Drawing.Point(981, 516);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(239, 24);
-            this.comboBox2.TabIndex = 29;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(422, 576);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(294, 22);
-            this.dateTimePicker1.TabIndex = 30;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(337, 549);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 17);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Tên Tuyến";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(422, 546);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(294, 22);
-            this.textBox2.TabIndex = 32;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(824, 551);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 17);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Trạm Trung Giang";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "PREMIUM",
-            "BASIC"});
-            this.comboBox3.Location = new System.Drawing.Point(981, 548);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(239, 24);
-            this.comboBox3.TabIndex = 29;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(422, 516);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(85, 22);
-            this.textBox3.TabIndex = 32;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(393, 519);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 17);
-            this.label9.TabIndex = 31;
-            this.label9.Text = "ID";
+            this.dgvTuyenXe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTuyenXe_CellContentClick);
             // 
             // ID
             // 
@@ -647,28 +474,196 @@
             this.TramTG.Name = "TramTG";
             this.TramTG.ReadOnly = true;
             // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(737, 626);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(100, 31);
+            this.btnSua.TabIndex = 26;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(875, 626);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(100, 31);
+            this.btnXoa.TabIndex = 27;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(603, 626);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 31);
+            this.btnThem.TabIndex = 28;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(896, 519);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 17);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Trạm 1";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(347, 576);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Thời gian";
+            // 
+            // txtKhoanCach
+            // 
+            this.txtKhoanCach.Location = new System.Drawing.Point(624, 516);
+            this.txtKhoanCach.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKhoanCach.Name = "txtKhoanCach";
+            this.txtKhoanCach.Size = new System.Drawing.Size(92, 22);
+            this.txtKhoanCach.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(525, 519);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Khoảng cách";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(896, 588);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 17);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Trạm 2";
+            // 
+            // cbTram2
+            // 
+            this.cbTram2.FormattingEnabled = true;
+            this.cbTram2.Location = new System.Drawing.Point(981, 585);
+            this.cbTram2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTram2.Name = "cbTram2";
+            this.cbTram2.Size = new System.Drawing.Size(239, 24);
+            this.cbTram2.TabIndex = 1;
+            // 
+            // cbTram1
+            // 
+            this.cbTram1.FormattingEnabled = true;
+            this.cbTram1.Location = new System.Drawing.Point(981, 516);
+            this.cbTram1.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTram1.Name = "cbTram1";
+            this.cbTram1.Size = new System.Drawing.Size(239, 24);
+            this.cbTram1.TabIndex = 29;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(337, 549);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 17);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Tên Tuyến";
+            // 
+            // txtTenTuyen
+            // 
+            this.txtTenTuyen.Location = new System.Drawing.Point(422, 546);
+            this.txtTenTuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenTuyen.Name = "txtTenTuyen";
+            this.txtTenTuyen.Size = new System.Drawing.Size(294, 22);
+            this.txtTenTuyen.TabIndex = 32;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(824, 551);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 17);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Trạm Trung Giang";
+            // 
+            // cbTramTrungGian
+            // 
+            this.cbTramTrungGian.FormattingEnabled = true;
+            this.cbTramTrungGian.Items.AddRange(new object[] {
+            "Null"});
+            this.cbTramTrungGian.Location = new System.Drawing.Point(981, 548);
+            this.cbTramTrungGian.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTramTrungGian.Name = "cbTramTrungGian";
+            this.cbTramTrungGian.Size = new System.Drawing.Size(239, 24);
+            this.cbTramTrungGian.TabIndex = 29;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(422, 516);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(85, 22);
+            this.txtID.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(393, 519);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(21, 17);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "ID";
+            // 
+            // txtThoiGian
+            // 
+            this.txtThoiGian.Location = new System.Drawing.Point(422, 576);
+            this.txtThoiGian.Name = "txtThoiGian";
+            this.txtThoiGian.Size = new System.Drawing.Size(294, 22);
+            this.txtThoiGian.TabIndex = 33;
+            // 
             // QLTUYENXE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(44)))), ((int)(((byte)(129)))));
             this.ClientSize = new System.Drawing.Size(1321, 672);
+            this.Controls.Add(this.txtThoiGian);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtTenTuyen);
+            this.Controls.Add(this.cbTramTrungGian);
+            this.Controls.Add(this.cbTram1);
+            this.Controls.Add(this.cbTram2);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtKhoanCach);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
@@ -678,7 +673,6 @@
             this.Name = "QLTUYENXE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-           
             this.Load += new System.EventHandler(this.QLTUYENXE_Load);
             this.panel1.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
@@ -721,24 +715,23 @@
 		private System.Windows.Forms.Panel panel9;
 		private System.Windows.Forms.Button TUYENXE_BTN;
 		private System.Windows.Forms.Panel panel8;
-		private System.Windows.Forms.Button button8;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button btnSua;
+		private System.Windows.Forms.Button btnXoa;
+		private System.Windows.Forms.Button btnThem;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtKhoanCach;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cbTram2;
 		private System.Windows.Forms.Button QLKHACH_BTN;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.ComboBox comboBox2;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.ComboBox cbTram1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTenTuyen;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cbTramTrungGian;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTuyen;
@@ -747,5 +740,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tram1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tram2;
         private System.Windows.Forms.DataGridViewTextBoxColumn TramTG;
+        private System.Windows.Forms.TextBox txtThoiGian;
     }
 }

@@ -130,6 +130,10 @@
       <Project>{b1b24180-e30b-4049-a739-a1e827ff2db6}</Project>
       <Name>BUS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{c092fab8-835e-43f7-8c7c-558600168d0b}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
-
+using DTO;
 namespace _16CK2_LTUDQL1__11_
 {
 	public partial class QLTUYENXE : Form
@@ -22,6 +22,9 @@ namespace _16CK2_LTUDQL1__11_
         public void reLoad()
         {
             dgvTuyenXe.DataSource = bus.loadTuyen();
+            cbTram1.DataSource = bus.loadTram();
+            cbTram2.DataSource = bus.loadTram();
+            cbTramTrungGian.DataSource = bus.loadTram();
         }
 		private void BANVE_BTN_Click(object sender, EventArgs e)
 		{
@@ -55,6 +58,26 @@ namespace _16CK2_LTUDQL1__11_
             reLoad();
         }
 
-        
+        private void dgvTuyenXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int CurrentIndex =dgvTuyenXe.CurrentCell.RowIndex;
+            txtID.Text = dgvTuyenXe.Rows[CurrentIndex].Cells["ID"].Value.ToString();
+            txtKhoanCach.Text = dgvTuyenXe.Rows[CurrentIndex].Cells["KhoanCach"].Value.ToString();
+            txtThoiGian.Text= dgvTuyenXe.Rows[CurrentIndex].Cells["ThoiGianChay"].Value.ToString();
+            txtTenTuyen.Text = dgvTuyenXe.Rows[CurrentIndex].Cells["TenTuyen"].Value.ToString();
+            cbTram1.Text = dgvTuyenXe.Rows[CurrentIndex].Cells["Tram1"].Value.ToString();
+            cbTram2.Text = dgvTuyenXe.Rows[CurrentIndex].Cells["Tram2"].Value.ToString();         
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            TuyenXe tx = new TuyenXe();
+            tx.IdTuyen = txtID.Text;
+            tx.KhoanCach =Convert.ToDouble( txtKhoanCach.Text.ToString());
+            tx.ThoiGian = txtThoiGian.Text;
+            tx.TenTuyen = txtTenTuyen.Text;
+            tx.Tram1=cbTram1.Text;
+            tx.Tram2 = cbTram2.Text;
+        }
     }
 }

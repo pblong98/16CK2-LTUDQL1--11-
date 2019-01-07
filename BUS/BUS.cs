@@ -90,6 +90,16 @@ namespace BUS
         {
             return dao.loadTuyen();
         }
+        public List<String> loadTram()
+        {
+            List<string> tenTram = new List<string>();
+            foreach (DataRow row in dao.loadTram().Rows)
+            {
+                tenTram.Add(row["tenTram"].ToString());
+            }
+            tenTram.Add("NULL");
+            return tenTram;
+        }
 
     }
 }
