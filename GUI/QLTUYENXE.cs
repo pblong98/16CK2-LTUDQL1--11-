@@ -89,5 +89,19 @@ namespace _16CK2_LTUDQL1__11_
             bus.xoaTuyen(ID);
             reLoad();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            TuyenXe tx = new TuyenXe();
+            
+            tx.IdTuyen = txtID.Text;
+            tx.KhoanCach= Convert.ToDouble(txtKhoanCach.Text.ToString());
+            tx.ThoiGian = txtThoiGian.Text;
+            tx.Tram1 = cbTram1.Text;
+            tx.Tram2 = cbTram2.Text;
+            tx.TenTuyen= txtTenTuyen.Text;
+            bus.suaTuyen(tx);
+            reLoad();
+        }
     }
 }

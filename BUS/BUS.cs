@@ -121,9 +121,19 @@ namespace BUS
             {
                 tx.Tram2 = row2["ID_Tram"].ToString();
             }
-          
-            //tx.TramTG =dao.loadTram(tx.Tram1).ToString();
             return dao.ThemTuyen(tx);
+        }
+        public int suaTuyen(TuyenXe tx)
+        {
+            foreach (DataRow row in dao.LoadTram(tx.Tram1).Rows)
+            {
+                tx.Tram1 = row["ID_Tram"].ToString();
+            }
+            foreach (DataRow row2 in dao.LoadTram(tx.Tram2).Rows)
+            {
+                tx.Tram2 = row2["ID_Tram"].ToString();
+            }
+            return dao.SuaTuyen(tx);
         }
         public int xoaTuyen(int id)
         {

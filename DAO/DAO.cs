@@ -236,5 +236,15 @@ namespace DAO
             provider.DisConnect();
             return nRow;
         }
+        public int SuaTuyen(TuyenXe tx)
+        {
+            int t1 = Convert.ToInt32(tx.Tram1);
+            int t2 = Convert.ToInt32(tx.Tram2);
+            int id = Convert.ToInt32(tx.IdTuyen);
+            provider.Connect();
+            int nRow = provider.ExecuteNonQuery(CommandType.Text, "update Tuyen set KhoangCach = " + tx.KhoanCach + ", ThoiGianChay = N'" + tx.ThoiGian + "', Tram_ID_Tram1 = " + t1 + " , Tram_ID_Tram = " + t2 + " , TenTuyen = N'" + tx.TenTuyen +"' where ID_Tuyen = " + id + "");
+            provider.DisConnect();
+            return nRow;
+        }
     }
 }
