@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using DTO;
 
 namespace _16CK2_LTUDQL1__11_
 {
@@ -67,8 +68,20 @@ namespace _16CK2_LTUDQL1__11_
             cbTaiXe.Text= dgvChuyenXe.Rows[CurrentIndex].Cells["TaiXe"].Value.ToString();
             DateTime a = new DateTime();
             a = Convert.ToDateTime(dgvChuyenXe.Rows[CurrentIndex].Cells["GioKhoiHanh"].Value);
-            dptThoiGian.ShowUpDown = true;
-            dptThoiGian.Value = a;
+            dtpThoiGian.ShowUpDown = true;
+            dtpThoiGian.Value = a;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ChuyenXe cx = new ChuyenXe();
+            cx.ChuyenID = txtMaChuyen.Text.ToString();
+            cx.Tuyen = cbTuyenXe.Text.ToString();
+            cx.Xe = cbMaXe.Text.ToString();
+            cx.TaiXe = cbTaiXe.Text.ToString();
+            cx.GioKhoiHanh = Convert.ToDateTime(dtpThoiGian.Text);
+            cx.GhiChu = txtGhiChu.Text.ToString();
+            bus.themChuyen(cx);
         }
     }
 }

@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -60,7 +60,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbTaiXe = new System.Windows.Forms.ComboBox();
             this.cbMaXe = new System.Windows.Forms.ComboBox();
-            this.dptThoiGian = new System.Windows.Forms.DateTimePicker();
+            this.dtpThoiGian = new System.Windows.Forms.DateTimePicker();
             this.txtGhiChu = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMaChuyen = new System.Windows.Forms.TextBox();
@@ -382,14 +382,14 @@
             this.dgvChuyenXe.AllowUserToDeleteRows = false;
             this.dgvChuyenXe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChuyenXe.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChuyenXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChuyenXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvChuyenXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChuyenXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Chuyen,
@@ -438,6 +438,7 @@
             this.button5.TabIndex = 28;
             this.button5.Text = "Thêm";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label4
             // 
@@ -501,15 +502,15 @@
             this.cbMaXe.Size = new System.Drawing.Size(239, 24);
             this.cbMaXe.TabIndex = 29;
             // 
-            // dptThoiGian
+            // dtpThoiGian
             // 
-            this.dptThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dptThoiGian.Location = new System.Drawing.Point(814, 521);
-            this.dptThoiGian.Margin = new System.Windows.Forms.Padding(4);
-            this.dptThoiGian.Name = "dptThoiGian";
-            this.dptThoiGian.Size = new System.Drawing.Size(358, 22);
-            this.dptThoiGian.TabIndex = 30;
-            this.dptThoiGian.Value = new System.DateTime(2019, 2, 10, 0, 0, 0, 0);
+            this.dtpThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpThoiGian.Location = new System.Drawing.Point(814, 521);
+            this.dtpThoiGian.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpThoiGian.Name = "dtpThoiGian";
+            this.dtpThoiGian.Size = new System.Drawing.Size(358, 22);
+            this.dtpThoiGian.TabIndex = 30;
+            this.dtpThoiGian.Value = new System.DateTime(2019, 2, 10, 0, 0, 0, 0);
             // 
             // txtGhiChu
             // 
@@ -608,7 +609,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(44)))), ((int)(((byte)(129)))));
             this.ClientSize = new System.Drawing.Size(1321, 672);
             this.Controls.Add(this.txtGhiChu);
-            this.Controls.Add(this.dptThoiGian);
+            this.Controls.Add(this.dtpThoiGian);
             this.Controls.Add(this.cbTuyenXe);
             this.Controls.Add(this.cbMaXe);
             this.Controls.Add(this.cbTaiXe);
@@ -682,7 +683,7 @@
 		private System.Windows.Forms.Button QLKHACH_BTN;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.ComboBox cbMaXe;
-		private System.Windows.Forms.DateTimePicker dptThoiGian;
+		private System.Windows.Forms.DateTimePicker dtpThoiGian;
 		private System.Windows.Forms.RichTextBox txtGhiChu;
 		private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMaChuyen;

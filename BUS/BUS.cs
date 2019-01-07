@@ -165,5 +165,22 @@ namespace BUS
             }
             return TenTaiXe;
         }
+        public int themChuyen(ChuyenXe cx)
+        {
+
+            foreach (DataRow row in dao.loadTenXe(cx.Xe).Rows)
+            {
+                cx.Xe = row["TenXe"].ToString();
+            }
+            foreach (DataRow row2 in dao.loadTenTaiXe(cx.TaiXe).Rows)
+            {
+                cx.TaiXe = row2["TenTaiXe"].ToString();
+            }
+            foreach (DataRow row2 in dao.loadTenTuyen(cx.Tuyen).Rows)
+            {
+                cx.Tuyen = row2["ID_Tuyen"].ToString();
+            }
+            return dao.ThemChuyen(cx);
+        }
     }
 }
