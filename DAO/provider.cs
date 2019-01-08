@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
+
 
 namespace DAO
 {
 	class Provider
 	{
-		static string SqlConnectionstring = @"Data Source=DESKTOP-NAM\SQLEXPRESS;Initial Catalog=QUANLYVEXE;Integrated Security=True";
+		static string SqlConnectionstring = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
 		public SqlConnection Connection { get; set; }
         
         public void Connect()

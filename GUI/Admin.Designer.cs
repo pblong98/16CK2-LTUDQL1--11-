@@ -111,6 +111,9 @@
             this.LoaiXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label27 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.MaTram = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTram = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -246,6 +249,8 @@
             // 
             // dgvTK
             // 
+            this.dgvTK.AllowUserToAddRows = false;
+            this.dgvTK.AllowUserToDeleteRows = false;
             this.dgvTK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTK.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -254,6 +259,7 @@
             this.PhanQuyen});
             this.dgvTK.Location = new System.Drawing.Point(0, 6);
             this.dgvTK.Name = "dgvTK";
+            this.dgvTK.ReadOnly = true;
             this.dgvTK.RowTemplate.Height = 24;
             this.dgvTK.Size = new System.Drawing.Size(585, 399);
             this.dgvTK.TabIndex = 0;
@@ -369,7 +375,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaTram,
+            this.TenTram,
+            this.DiaDiem});
             this.dataGridView1.Location = new System.Drawing.Point(29, 45);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
@@ -946,6 +957,21 @@
             this.comboBox1.Size = new System.Drawing.Size(249, 33);
             this.comboBox1.TabIndex = 32;
             // 
+            // MaTram
+            // 
+            this.MaTram.HeaderText = "Mã Trạm";
+            this.MaTram.Name = "MaTram";
+            // 
+            // TenTram
+            // 
+            this.TenTram.HeaderText = "Tên Trạm";
+            this.TenTram.Name = "TenTram";
+            // 
+            // DiaDiem
+            // 
+            this.DiaDiem.HeaderText = "Địa Điểm";
+            this.DiaDiem.Name = "DiaDiem";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1057,5 +1083,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenXe;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoDangKy;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTram;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTram;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaDiem;
     }
 }
