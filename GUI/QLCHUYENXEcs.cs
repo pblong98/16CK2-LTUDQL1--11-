@@ -84,5 +84,13 @@ namespace _16CK2_LTUDQL1__11_
             bus.themChuyen(cx);
             reLoad();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int CurrentIndex = dgvChuyenXe.CurrentCell.RowIndex;
+            int maChuyen=int.Parse( dgvChuyenXe.Rows[CurrentIndex].Cells["Chuyen"].Value.ToString());
+            bus.xoaChuyen(maChuyen);
+            reLoad();
+        }
     }
 }

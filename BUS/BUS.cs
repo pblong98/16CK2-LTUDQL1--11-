@@ -182,5 +182,9 @@ namespace BUS
             }
             return dao.ThemChuyen(cx);
         }
+        public int xoaChuyen(int maChuyen)
+        {
+            return dao.XoaChuyen(maChuyen);
+        }
     }
 }

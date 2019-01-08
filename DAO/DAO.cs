@@ -316,5 +316,12 @@ namespace DAO
             provider.DisConnect();
             return nRow;
         }
+        public int XoaChuyen(int maChuyen)
+        {
+            provider.Connect();
+            int nRow = provider.ExecuteNonQuery(CommandType.Text, "delete from Chuyen where ID_Chuyen = " + maChuyen + "");
+            provider.DisConnect();
+            return nRow;
+        }
     }
 }
