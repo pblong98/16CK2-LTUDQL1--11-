@@ -12,37 +12,37 @@ using DTO;
 
 namespace _16CK2_LTUDQL1__11_
 {
-	public partial class QLCHUYENXEcs : Form
-	{
-		public QLCHUYENXEcs()
-		{
-			InitializeComponent();
-		}
+    public partial class QLCHUYENXEcs : Form
+    {
+        public QLCHUYENXEcs()
+        {
+            InitializeComponent();
+        }
         Bus bus = new Bus();
-		private void TUYENXE_BTN_Click(object sender, EventArgs e)
-		{
-			QLTUYENXE form = new QLTUYENXE();
-			form.Show();
-			this.Close();
-		}
+        private void TUYENXE_BTN_Click(object sender, EventArgs e)
+        {
+            QLTUYENXE form = new QLTUYENXE();
+            form.Show();
+            this.Close();
+        }
 
-		private void QLKHACH_BTN_Click(object sender, EventArgs e)
-		{
-			QLKHACH form = new QLKHACH();
-			form.Show();
-			this.Close();
-		}
+        private void QLKHACH_BTN_Click(object sender, EventArgs e)
+        {
+            QLKHACH form = new QLKHACH();
+            form.Show();
+            this.Close();
+        }
 
-		private void BANVE_BTN_Click(object sender, EventArgs e)
-		{
-			QLVE form = new QLVE();
-			form.Show();
-			this.Close();
-		}
+        private void BANVE_BTN_Click(object sender, EventArgs e)
+        {
+            QLVE form = new QLVE();
+            form.Show();
+            this.Close();
+        }
 
-		private void CLOSE_BTN_Click(object sender, EventArgs e)
-		{
-			this.Close();
+        private void CLOSE_BTN_Click(object sender, EventArgs e)
+        {
+            this.Close();
             Application.Exit();
         }
 
@@ -60,12 +60,12 @@ namespace _16CK2_LTUDQL1__11_
 
         private void dgvChuyenXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int CurrentIndex =dgvChuyenXe.CurrentCell.RowIndex;
+            int CurrentIndex = dgvChuyenXe.CurrentCell.RowIndex;
             txtGhiChu.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["GhiChu"].Value.ToString();
-            txtMaChuyen.Text= dgvChuyenXe.Rows[CurrentIndex].Cells["Chuyen"].Value.ToString();
+            txtMaChuyen.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["Chuyen"].Value.ToString();
             cbTuyenXe.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["Tuyen"].Value.ToString();
             cbMaXe.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["MaXe"].Value.ToString();
-            cbTaiXe.Text= dgvChuyenXe.Rows[CurrentIndex].Cells["TaiXe"].Value.ToString();
+            cbTaiXe.Text = dgvChuyenXe.Rows[CurrentIndex].Cells["TaiXe"].Value.ToString();
             DateTime a = new DateTime();
             a = Convert.ToDateTime(dgvChuyenXe.Rows[CurrentIndex].Cells["GioKhoiHanh"].Value);
             dtpThoiGian.ShowUpDown = true;
@@ -88,7 +88,7 @@ namespace _16CK2_LTUDQL1__11_
         private void btnXoa_Click(object sender, EventArgs e)
         {
             int CurrentIndex = dgvChuyenXe.CurrentCell.RowIndex;
-            int maChuyen=int.Parse( dgvChuyenXe.Rows[CurrentIndex].Cells["Chuyen"].Value.ToString());
+            int maChuyen = int.Parse(dgvChuyenXe.Rows[CurrentIndex].Cells["Chuyen"].Value.ToString());
             bus.xoaChuyen(maChuyen);
             reLoad();
         }
@@ -108,7 +108,18 @@ namespace _16CK2_LTUDQL1__11_
 
         private void txtTimMa_TextChanged(object sender, EventArgs e)
         {
+            string ten = txtTimMa.Text.ToString();
+            dgvChuyenXe.DataSource = bus.timTuyen(ten);
+        }
 
+        private void txtMaChuyen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) || char.IsSymbol(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Vui lòng nhập số");
+
+            }
         }
     }
 }
