@@ -31,13 +31,20 @@ namespace _16CK2_LTUDQL1__11_
                     a.ShowDialog();
                     this.Show();
                 }
+                else if(bus.PhanQuyen(userName) == "report")
+                {
+                    NhanVienBaoCao f = new NhanVienBaoCao();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
                 else
                 {
                     QLVE f = new QLVE();
                     this.Hide();
                     f.ShowDialog();
                     this.Show();
-                }              
+                }
             }
             else
             {

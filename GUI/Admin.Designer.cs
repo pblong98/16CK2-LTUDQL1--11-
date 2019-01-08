@@ -43,6 +43,9 @@
             this.btnXoaTK = new System.Windows.Forms.Button();
             this.btnThemTK = new System.Windows.Forms.Button();
             this.dgvTK = new System.Windows.Forms.DataGridView();
+            this.TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhanQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.cbTuyen = new System.Windows.Forms.ComboBox();
             this.cbTram = new System.Windows.Forms.ComboBox();
@@ -111,9 +114,6 @@
             this.TenXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhanQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTK)).BeginInit();
@@ -255,6 +255,7 @@
             this.btnSuaTK.TabIndex = 1;
             this.btnSuaTK.Text = "Sửa";
             this.btnSuaTK.UseVisualStyleBackColor = true;
+            this.btnSuaTK.Click += new System.EventHandler(this.btnSuaTK_Click);
             // 
             // btnXoaTK
             // 
@@ -265,6 +266,7 @@
             this.btnXoaTK.TabIndex = 1;
             this.btnXoaTK.Text = "Xóa";
             this.btnXoaTK.UseVisualStyleBackColor = true;
+            this.btnXoaTK.Click += new System.EventHandler(this.btnXoaTK_Click);
             // 
             // btnThemTK
             // 
@@ -291,9 +293,31 @@
             this.dgvTK.Name = "dgvTK";
             this.dgvTK.ReadOnly = true;
             this.dgvTK.RowTemplate.Height = 24;
+            this.dgvTK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTK.Size = new System.Drawing.Size(585, 399);
             this.dgvTK.TabIndex = 0;
             this.dgvTK.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTK_CellContentClick);
+            // 
+            // TaiKhoan
+            // 
+            this.TaiKhoan.DataPropertyName = "userr";
+            this.TaiKhoan.HeaderText = "Tài Khoản";
+            this.TaiKhoan.Name = "TaiKhoan";
+            this.TaiKhoan.ReadOnly = true;
+            // 
+            // MatKhau
+            // 
+            this.MatKhau.DataPropertyName = "pass";
+            this.MatKhau.HeaderText = "Mật Khẩu";
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.ReadOnly = true;
+            // 
+            // PhanQuyen
+            // 
+            this.PhanQuyen.DataPropertyName = "rulee";
+            this.PhanQuyen.HeaderText = "Phân Quyền";
+            this.PhanQuyen.Name = "PhanQuyen";
+            this.PhanQuyen.ReadOnly = true;
             // 
             // tabPage2
             // 
@@ -961,27 +985,6 @@
             this.LoaiXe.HeaderText = "Loại Xe";
             this.LoaiXe.Name = "LoaiXe";
             // 
-            // TaiKhoan
-            // 
-            this.TaiKhoan.DataPropertyName = "userr";
-            this.TaiKhoan.HeaderText = "Tài Khoản";
-            this.TaiKhoan.Name = "TaiKhoan";
-            this.TaiKhoan.ReadOnly = true;
-            // 
-            // MatKhau
-            // 
-            this.MatKhau.DataPropertyName = "pass";
-            this.MatKhau.HeaderText = "Mật Khẩu";
-            this.MatKhau.Name = "MatKhau";
-            this.MatKhau.ReadOnly = true;
-            // 
-            // PhanQuyen
-            // 
-            this.PhanQuyen.DataPropertyName = "rulee";
-            this.PhanQuyen.HeaderText = "Phân Quyền";
-            this.PhanQuyen.Name = "PhanQuyen";
-            this.PhanQuyen.ReadOnly = true;
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -989,6 +992,7 @@
             this.ClientSize = new System.Drawing.Size(947, 552);
             this.Controls.Add(this.tabControl1);
             this.Name = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.tabControl1.ResumeLayout(false);

@@ -225,5 +225,17 @@ namespace BUS
         {
             return d.TimTaiKhoangd(user);
         }
+        public int ThemTK(TaiKhoan tk)
+        {
+            return d.ThemTaiKhoan(tk);
+        }
+        public int XoaTK(string user)
+        {
+            return d.XoaTaiKhoan(user);
+        }
+        public int SuaTK(TaiKhoan tk)
+        {
+            return d.SuaTaiKhoan(tk);
+        }
     }
 }

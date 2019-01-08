@@ -18,6 +18,7 @@ namespace _16CK2_LTUDQL1__11_
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new QLVE());
             Application.Run(new DangNhap());
+            //Application.Run(new BaoCao());
         }
     }
 }

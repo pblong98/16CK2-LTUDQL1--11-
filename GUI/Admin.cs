@@ -45,7 +45,30 @@ namespace _16CK2_LTUDQL1__11_
 
         private void btnThemTK_Click(object sender, EventArgs e)
         {
+            TaiKhoan tk = new TaiKhoan();
+            tk.TenDangNhap = txtTK.Text.ToString();
+            tk.MatKhau = txtMK.Text.ToString();
+            tk.PhanQuyen = txtPhanQuyen.Text.ToString();
+            bus.ThemTK(tk);
+            reLoad();
+        }
 
+        private void btnSuaTK_Click(object sender, EventArgs e)
+        {
+            TaiKhoan tk = new TaiKhoan();
+            tk.TenDangNhap = txtTK.Text.ToString();
+            tk.MatKhau = txtMK.Text.ToString();
+            tk.PhanQuyen = txtPhanQuyen.Text.ToString();
+            bus.SuaTK(tk);
+            reLoad();
+        }
+
+        private void btnXoaTK_Click(object sender, EventArgs e)
+        {
+            int CurrentIndex = dgvTK.CurrentCell.RowIndex;
+            string user = dgvTK.Rows[CurrentIndex].Cells["TaiKhoan"].Value.ToString();
+            bus.XoaTK(user);
+            reLoad();
         }
     }
 }
