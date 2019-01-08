@@ -15,8 +15,9 @@ namespace BUS
         public Bus()
         {
             dao = new DAO.DAO();
+           
         }
-
+        static DAOADMIN d = new DAOADMIN();
         public Dictionary<string, string> LoadDSTuyenCBB()
         {
             return dao.LoadDanhSachTuyenXe();
@@ -202,6 +203,19 @@ namespace BUS
                 cx.Tuyen = row3["ID_Tuyen"].ToString();
             }
             return dao.SuaChuyen(cx);
+        }
+        public bool Login(string userName, string passWord)
+        {
+            return d.DangNhap(userName, passWord);
+        }
+        public string PhanQuyen(string user)
+        {
+            string a = "";
+            foreach (DataRow row in d.TimTaiKhoan(user).Rows)
+            {
+                a = row["rule"].ToString();
+            }
+            return a;
         }
     }
 }
