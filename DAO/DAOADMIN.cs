@@ -32,7 +32,7 @@ namespace DAO
         public DataTable LoadTaiKhoan()
         {
             provider.Connect();
-            DataTable data = provider.Select(CommandType.Text, "select * from DangNhap");
+            DataTable data = provider.Select(CommandType.Text, "select * from DangNhap_");
             provider.DisConnect();
             return data;
         }
@@ -90,7 +90,7 @@ namespace DAO
         public DataTable TimTaiKhoan(string user)
         {
             provider.Connect();
-            DataTable data = provider.Select(CommandType.Text, "select * from DangNhap where user=N'"+ user + "'");
+            DataTable data = provider.Select(CommandType.Text, "select * from DangNhap_ where userr='"+ user + "'");
             provider.DisConnect();
             return data;
         }
