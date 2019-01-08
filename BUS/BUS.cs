@@ -213,9 +213,17 @@ namespace BUS
             string a = "";
             foreach (DataRow row in d.TimTaiKhoan(user).Rows)
             {
-                a = row["rule"].ToString();
+                a = row["rulee"].ToString();
             }
             return a;
+        }
+        public DataTable loadTK()
+        {
+            return d.LoadTaiKhoan();
+        }
+        public DataTable timTK(string user)
+        {
+            return d.TimTaiKhoangd(user);
         }
     }
 }

@@ -94,6 +94,13 @@ namespace DAO
             provider.DisConnect();
             return data;
         }
+        public DataTable TimTaiKhoangd(string user)
+        {
+            provider.Connect();
+            DataTable data = provider.Select(CommandType.Text, "select * from DangNhap_ where userr like '%" + user + "%'");
+            provider.DisConnect();
+            return data;
+        }
 
     }
 }
