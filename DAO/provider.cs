@@ -12,8 +12,8 @@ namespace DAO
 	{
 		static string SqlConnectionstring = @"Data Source=DESKTOP-NAM\SQLEXPRESS;Initial Catalog=QUANLYVEXE;Integrated Security=True";
 		public SqlConnection Connection { get; set; }
-
-		public void Connect()
+        
+        public void Connect()
 		{
 			try
 			{

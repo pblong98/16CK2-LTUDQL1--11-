@@ -186,5 +186,22 @@ namespace BUS
         {
             return dao.XoaChuyen(maChuyen);
         }
+        public int SuaChuyen(ChuyenXe cx)
+        {
+
+            foreach (DataRow row in dao.loadTenXe(cx.Xe).Rows)
+            {
+                cx.Xe = row["XeID"].ToString();
+            }
+            foreach (DataRow row2 in dao.loadTenTaiXe(cx.TaiXe).Rows)
+            {
+                cx.TaiXe = row2["ID_TaiXe"].ToString();
+            }
+            foreach (DataRow row3 in dao.loadTenTuyen(cx.Tuyen).Rows)
+            {
+                cx.Tuyen = row3["ID_Tuyen"].ToString();
+            }
+            return dao.SuaChuyen(cx);
+        }
     }
 }

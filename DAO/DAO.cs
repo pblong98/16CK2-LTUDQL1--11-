@@ -323,5 +323,16 @@ namespace DAO
             provider.DisConnect();
             return nRow;
         }
+        public int SuaChuyen(ChuyenXe cx)
+        {
+            int t = Convert.ToInt32(cx.Tuyen);
+            int tx = Convert.ToInt32(cx.TaiXe);
+            int xe = Convert.ToInt32(cx.Xe);
+            int id = Convert.ToInt32(cx.ChuyenID);
+            provider.Connect();
+            int nRow = provider.ExecuteNonQuery(CommandType.Text, "update Chuyen set Tuyen_ID_Tuyen = " +t+ ", Gio_Khoi_Hanh = N'" + cx.GioKhoiHanh + "', Ghi_Chu = '" + cx.GhiChu + "' , Xe_XeID = " + xe + " , Tai_xe_ID_TaiXe = " + tx + " where ID_Chuyen = " + id + "");
+            provider.DisConnect();
+            return nRow;
+        }
     }
 }

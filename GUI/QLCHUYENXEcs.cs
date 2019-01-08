@@ -72,7 +72,7 @@ namespace _16CK2_LTUDQL1__11_
             dtpThoiGian.Value = a;
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
             ChuyenXe cx = new ChuyenXe();
             cx.ChuyenID = txtMaChuyen.Text.ToString();
@@ -85,12 +85,30 @@ namespace _16CK2_LTUDQL1__11_
             reLoad();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             int CurrentIndex = dgvChuyenXe.CurrentCell.RowIndex;
             int maChuyen=int.Parse( dgvChuyenXe.Rows[CurrentIndex].Cells["Chuyen"].Value.ToString());
             bus.xoaChuyen(maChuyen);
             reLoad();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ChuyenXe cx = new ChuyenXe();
+            cx.ChuyenID = txtMaChuyen.Text.ToString();
+            cx.Tuyen = cbTuyenXe.Text.ToString();
+            cx.Xe = cbMaXe.Text.ToString();
+            cx.TaiXe = cbTaiXe.Text.ToString();
+            cx.GioKhoiHanh = dtpThoiGian.Text.ToString();
+            cx.GhiChu = txtGhiChu.Text.ToString();
+            bus.SuaChuyen(cx);
+            reLoad();
+        }
+
+        private void txtTimMa_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -57,9 +57,9 @@
             this.MaXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TaiXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -353,6 +353,7 @@
             this.txtTimMa.Name = "txtTimMa";
             this.txtTimMa.Size = new System.Drawing.Size(129, 22);
             this.txtTimMa.TabIndex = 6;
+            this.txtTimMa.TextChanged += new System.EventHandler(this.txtTimMa_TextChanged);
             // 
             // label6
             // 
@@ -451,37 +452,38 @@
             this.GhiChu.Name = "GhiChu";
             this.GhiChu.ReadOnly = true;
             // 
-            // button8
+            // btnSua
             // 
-            this.button8.Location = new System.Drawing.Point(1209, 582);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 31);
-            this.button8.TabIndex = 26;
-            this.button8.Text = "Sửa";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(1209, 582);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(100, 31);
+            this.btnSua.TabIndex = 26;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // button6
+            // btnXoa
             // 
-            this.button6.Location = new System.Drawing.Point(1209, 620);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 31);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "Xóa";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnXoa.Location = new System.Drawing.Point(1209, 620);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(100, 31);
+            this.btnXoa.TabIndex = 27;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // button5
+            // btnThem
             // 
-            this.button5.Location = new System.Drawing.Point(1209, 544);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 31);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnThem.Location = new System.Drawing.Point(1209, 544);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 31);
+            this.btnThem.TabIndex = 28;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label4
             // 
@@ -615,11 +617,11 @@
             this.Controls.Add(this.cbMaXe);
             this.Controls.Add(this.cbTaiXe);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaChuyen);
@@ -673,9 +675,9 @@
 		private System.Windows.Forms.Panel panel9;
 		private System.Windows.Forms.Button TUYENXE_BTN;
 		private System.Windows.Forms.Panel panel8;
-		private System.Windows.Forms.Button button8;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button btnSua;
+		private System.Windows.Forms.Button btnXoa;
+		private System.Windows.Forms.Button btnThem;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
